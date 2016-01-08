@@ -1,13 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Clases;
 import javazoom.jl.player.*;
-/**
- *
- * @author SAMSUNG
- */
+
 public class player extends Thread {  //avisamos que nuestra clase es un hilo
     private jlp reproductor= null;  //instanciamos nuestro recurso de librería
     String ruta=""; //una string que nos dice en dónde está el archivo a reproducír

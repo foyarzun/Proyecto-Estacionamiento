@@ -137,7 +137,7 @@ Calendar re=Calendar.getInstance();
                 .addGap(0, 54, Short.MAX_VALUE))
         );
 
-        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 230, 80));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 230, 80));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaz/flat/close.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
