@@ -22,7 +22,7 @@ public class Clientes {
     public static Connection conexion;   //hacemos la conexión con ayuda de la clase DB
     int Cajon_Numero;
     String Placa, Nombre, Correo, Marca_modelo;  //declaramos variables
-    Double Llegada;
+    int Llegada;
     
     public Clientes(){  //constructor default
         this.Cajon_Numero=0;
@@ -30,7 +30,7 @@ public class Clientes {
         this.Nombre="";
         this.Correo="";
         this.Marca_modelo="";
-        this.Llegada=0.0;
+        this.Llegada=0;
     }
     
     public Clientes(String Nombre){  //método que retorna atributos asociados con el nombre que recibamos
@@ -48,7 +48,7 @@ public class Clientes {
                     this.Correo= resultado.getString(3);
                     this.Marca_modelo= resultado.getString(4);
                      this.Cajon_Numero= resultado.getInt(5);
-                     this.Llegada=resultado.getDouble(6);
+                     this.Llegada=resultado.getInt(6);
                 }
                 resultado.close();
             }
@@ -73,7 +73,7 @@ public class Clientes {
                     this.Correo= resultado.getString(3);
                     this.Marca_modelo= resultado.getString(4);
                      this.Cajon_Numero= resultado.getInt(5);
-                     this.Llegada=resultado.getDouble(6);
+                     this.Llegada=resultado.getInt(6);
                 }
                 resultado.close();
             }
@@ -84,7 +84,7 @@ public class Clientes {
     }
     
       //constructor
-    public Clientes (String Placa, String Nombre, String Correo, String Marca_modelo, int Cajon_Numero, double Llegada){
+    public Clientes (String Placa, String Nombre, String Correo, String Marca_modelo, int Cajon_Numero, int Llegada){
         this.Placa=Placa;
         this.Nombre=Nombre;
         this.Correo=Correo;
@@ -125,11 +125,11 @@ public class Clientes {
         this.Marca_modelo = Marca_modelo;
     }
 
-    public Double getLlegada() {
+    public int getLlegada() {
         return Llegada;
     }
 
-    public void setLlegada(Double Llegada) {
+    public void setLlegada(int Llegada) {
         this.Llegada = Llegada;
     }
 
@@ -155,7 +155,7 @@ public class Clientes {
             insertar.setString(3, Correo);
             insertar.setString(4,Marca_modelo);
             insertar.setInt(5,Cajon_Numero);
-            insertar.setDouble(6, Llegada);
+            insertar.setInt(6, Llegada);
             insertar.executeUpdate();
             conexion.close();
              JOptionPane.showMessageDialog(null,"Guardado!", "Éxito al Guardar",1);

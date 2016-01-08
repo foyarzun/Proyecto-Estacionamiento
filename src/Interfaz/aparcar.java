@@ -134,10 +134,10 @@ Calendar re=Calendar.getInstance();
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
                 .addComponent(jLabel5)
-                .addGap(0, 54, Short.MAX_VALUE))
+                .addGap(0, 64, Short.MAX_VALUE))
         );
 
-        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 230, 80));
+        getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 230, 90));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaz/flat/close.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
